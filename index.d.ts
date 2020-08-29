@@ -1,8 +1,5 @@
-// Type definitions for @react-native-community/toolbar-android
-// Type definitions based off what was originally implemented in @types/react-native
-
 import React from 'react';
-import { GestureResponderEvent } from 'react-native';
+import { GestureResponderEvent, NativeMethodsMixin } from 'react-native';
 
 type Constructor<T> = new (...args: any[]) => T;
 
@@ -15,5 +12,6 @@ declare module 'react-toikos' {
     }
 
     const TButton: React.FunctionComponent<TButtonParams>;
+    const TButtonBase: Constructor<NativeMethodsMixin> & typeof TButton;
     export default TButton;
 }
